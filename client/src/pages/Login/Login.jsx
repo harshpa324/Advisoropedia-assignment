@@ -21,7 +21,7 @@ const Login = () => {
                "content-type": "application/json"
             }
          }
-         const { data } = await axios.post("http://localhost:5000/api/user/login", { email, password }, config)
+         const { data } = await axios.post("https://advisoropedia-assignment-coral.vercel.app/api/user/login", { email, password }, config)
          localStorage.setItem("userInfo", JSON.stringify(data))
          setLoading(false)
          toast.success("Login Successful")

@@ -33,7 +33,7 @@ const Signup = () => {
             },
          };
          //  save user Data in database
-         const { data } = await axiosPublic.post("http://localhost:5000/api/user", { name, email, image, password }, config);
+         const { data } = await axiosPublic.post("https://advisoropedia-assignment-coral.vercel.app/api/user", { name, email, image, password }, config);
          localStorage.setItem("userInfo", JSON.stringify(data));
          setLoading(false);
          navigate('/');
